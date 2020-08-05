@@ -80,9 +80,15 @@ export const EditButton = styled.div`
 `;
 
 export const Followage = styled.div`
-
-
-
+	display:flex;
+	> span {
+		font-size: 15px;
+		color: var(--gray);
+		/* para cada span eu vou pegar o  */
+		+ span {
+			margin-left: 15px;;
+		}
+	}
 `;
 
 const IconCSS = css`
