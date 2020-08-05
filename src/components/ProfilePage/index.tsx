@@ -7,6 +7,7 @@ const ProfilePage: React.FC = () => {
 		<S.Container>
 			<S.Banner>
 				<S.Avatar />
+			</S.Banner>
 				<S.ProfileData>
 				{/* <S.EditButton outlined>Editar perfil</S.EditButton> */}
 
@@ -34,9 +35,7 @@ const ProfilePage: React.FC = () => {
 							<strong>682</strong> seguidores
 						</span>
 					</S.Followage>
-
 				</S.ProfileData>
-			</S.Banner>
 		</S.Container>
 	);
 }
