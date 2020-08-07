@@ -17,7 +17,7 @@ const Tweet: React.FC = () => {
 					<S.Header>
 						<strong>Rocketseat</strong>
 						<span>@rocketseat</span>
-						<Dot />
+						<S.Dot />
 						<time>27 de jun</time>
 					</S.Header>
 
