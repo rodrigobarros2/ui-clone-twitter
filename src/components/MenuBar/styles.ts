@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Home, Notifications, Email, FavoriteBorder, Person, Rocketseat, ExitToApp} from '../../styles/Icons';
+import { Home, Notifications, Email, FavoriteBorder, Person, Rocketseat, ExitToApp } from '../../styles/Icons';
 
 export const Container = styled.div`
 	display:none;
@@ -173,4 +173,4 @@ export const ExitIcon = styled(ExitToApp)`
 			}
 		}
 	}
-	`;
+`;
