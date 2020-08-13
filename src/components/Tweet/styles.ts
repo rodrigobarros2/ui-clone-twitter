@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Chat, Favorite, Rocketseat } from '../../styles/Icons'
 
 export const Container = styled.div`
@@ -102,29 +102,92 @@ export const ImageContent = styled.div`
 		}
 `;
 
-export const Icons = styled.div`
-
-`;
-
-export const CommentIcon = styled.div`
-
-`;
-
 export const Description = styled.p`
 	font-size: 14px;
 	margin-top: 4px;
 `;
 
+export const Icons = styled.div`
+	display:flex;
+	align-items: center;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	margin: 11px auto 0;
+	width: 100%;
 
-export const RetweetIcon = styled.div`
+	@media (min-width: 330px) {
+		width: 63%;
+	}
 
+	> div {
+		cursor: pointer;
+
+		&:hover {
+		opacity: 0.7;
+		}
+	}
 `;
 
+/* trabalhar com svg nem sembre é igual aqui vai uma demonstração de possibilidades */
 export const Status = styled.div`
+	display: flex;
+	align-items: center;
+	font-size: 14px;
 
+	> svg {
+		margin-right: 5px;
+	}
+
+&:nth-child(1) {
+		&,
+		> svg path {
+			color: var(--gray);
+		}
+	}
+
+	&:nth-child(2) {
+		color: var(--retweet);
+		> svg path {
+		fill: var(--retweet);
+		}
+
+	/* como seria com um hover
+			&:hover {
+				color: blue;
+			> svg path {
+			fill: blue ;
+			} */
+		}
+
+	}
+
+
+
+
+	&:nth-child(3) {
+		color: var(--like);
+
+		> svg  {
+		fill: var(--like);
+		}
+	}
 `;
 
-export const LikeIcon = styled.div`
 
+const iconCSS = css`
+	width: 19px;
+	height: 19px;
+`;
+
+export const CommentIcon = styled(Chat)`
+	${iconCSS}
+`;
+
+export const RetweetIcon = styled(Rocketseat)`
+	${iconCSS}
+`;
+
+export const LikeIcon = styled(Favorite)`
+	${iconCSS}
 `;
 
