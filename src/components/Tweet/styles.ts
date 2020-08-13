@@ -158,11 +158,7 @@ export const Status = styled.div`
 			fill: blue ;
 			} */
 		}
-
 	}
-
-
-
 
 	&:nth-child(3) {
 		color: var(--like);
