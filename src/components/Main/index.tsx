@@ -11,7 +11,7 @@ const Layout: React.FC = () => {
 					<S.BackIcon />
 				</button>
 				<S.ProfileInfo>
-					<strong>Guilerme Rodz</strong>
+					<strong>Rodrigo Barros</strong>
 					<span>612 Tweets</span>
 				</S.ProfileInfo>
 			</S.Header>
