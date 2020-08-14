@@ -1,6 +1,9 @@
 import React from 'react';
+import StickyBox from 'react-sticky-box';
+
 import List from '../List'
 import FollowSuggestion from '../FollowSuggestion';
+import News from '../News';
 
 import * as S from './styles';
 
@@ -11,23 +14,36 @@ const SideBar: React.FC = () => {
 				<S.SearchInput placeholder="Buscar no Twitter" />
 				<S.SearchIcons />
 			</S.SearchWrapper>
-			<S.Body>
-				<List
-					title="Talvez você curta"
-					elements={[
-						<FollowSuggestion
-							name="Luiz Batanero"
-							nickname="@luizbatanero"
-						/>,
-						<FollowSuggestion name="Luke Morales" nickname="@lukemorales" />,
-						<FollowSuggestion
-							name="Camila Magalhães"
-							nickname="@camilaamgl"
-						/>,
-					]}
-				/>
-				<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Non odio enim hic eius, accusantium a eaque, facilis et laborum nobis aspernatur consectetur fugit sit libero nam in. Optio, incidunt rem?</p>
-			</S.Body>
+			<StickyBox>
+				<S.Body>
+					<List
+						title="Talvez você curta"
+						elements={[
+							<FollowSuggestion
+								name="Rodrigo Barros"
+								nickname="@rodrigobarros3"
+							/>,
+							<FollowSuggestion
+								name="Rodrigo Barros"
+								nickname="@rodrigobarros3" />,
+							<FollowSuggestion
+								name="Rodrigo Barros"
+								nickname="@rodrigobarros3"
+							/>,
+						]}
+					/>
+					<List
+						title="O que está acontecendo"
+						elements={[
+							<News />,
+							<News />,
+							<News />,
+							<News />,
+							<News />,
+						]}
+					/>
+				</S.Body>
+			</StickyBox>
 		</S.Container >
 	);
 }
